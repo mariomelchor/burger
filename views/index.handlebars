@@ -1,0 +1,33 @@
+<h1>Burgers</h1>
+
+{{#each burger}}
+  {{#unless this.devoured}}
+    <p>ID: {{id}}</p>
+    <p>{{burger_name}}</p>
+    <p>Devoured: {{devoured}}</p>
+    <p>Date: {{date}}</p>
+    <form action="/?_method=PUT" method="POST">
+      <input type="hidden" name="id" value="{{id}}">
+      <input type="hidden" name="devoured" value="1">
+      <button type="submit">Devour</button>
+    </form>
+    <hr>
+ {{/unless}}
+{{/each}}
+
+<h1>Devoured</h1>
+
+{{#each burger}}
+  {{#if this.devoured}}
+    <p>ID: {{id}}</p>
+    <p>{{burger_name}}</p>
+    <p>Devoured: {{devoured}}</p>
+    <p>Date: {{date}}</p>
+    <hr>
+  {{/if}}
+{{/each}}
+
+<form action="/" method="POST">
+	<input type="text" name="burger">
+	<button type="submit">Add Burger</button>
+</form>
