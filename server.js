@@ -16,6 +16,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use('/', routes);
+app.use(express.static('./public'));
 
 // Initiate the listener.
 app.listen(port);

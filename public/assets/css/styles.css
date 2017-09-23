@@ -1,0 +1,7 @@
+body {
+  background:url('../img/burger-3.jpg');
+  background-size: cover;
+}
+.float-right {
+  float: right;
+}
