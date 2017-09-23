@@ -1,3 +1,6 @@
+html {
+  min-height: 100%;
+}
 body {
   background: #63BBD1 url('../img/burger-3.jpg') no-repeat center bottom;
   background-size: contain;
